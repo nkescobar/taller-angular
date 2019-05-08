@@ -4,19 +4,31 @@
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Add a link</h5>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Title</label>
-                        <input type="title" class="form-control" id="exampleInputtitle1" aria-describedby="titleHelp" placeholder="Enter title">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Title</label>
+                                <input type="title" class="form-control" id="exampleInputtitle1" aria-describedby="titleHelp" placeholder="Enter title">
+                        </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Link</label>
+                                <input type="Link" class="form-control" id="exampleInputLink1" aria-describedby="LinkHelp" placeholder="Enter Link">
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Link</label>
-                        <input type="Link" class="form-control" id="exampleInputLink1" aria-describedby="LinkHelp" placeholder="Enter Link">
-                    </div>
+                    
+                    
 
-                    <button class="btn btn-primary">Submit Link</button>
+                    <div class="text-right">
+                        <button class="btn btn-primary">Submit Link</button>
+                    </div>
                 </div>
             </div>
         </form>
-        <app-article class="m-5"></app-article>
+        <div *ngFor="let article of articles">
+                <app-article class="m-5" [article]="article"></app-article>
+        </div>
     </div>
 </div>

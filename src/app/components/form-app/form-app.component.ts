@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Article } from 'src/app/model/article.model';
 
 @Component({
   selector: 'app-form-app',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormAppComponent implements OnInit {
 
+  public articles: Article[];
+
   constructor() { }
 
   ngOnInit() {
+    this.articles = [
+      new Article('Java', 'www.java.com'),
+      new Article('Angular', 'www.angular.com', 1),
+    ];
   }
 
 }
