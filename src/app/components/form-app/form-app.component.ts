@@ -21,4 +21,12 @@ export class FormAppComponent implements OnInit {
     ];
   }
 
+  addArticle(titulo: HTMLInputElement, link: HTMLInputElement) {
+   this.articles.push(new Article(titulo.value, link.value));
+   return false;
+  }
+
+  ordenar() {
+  }
+
 }
