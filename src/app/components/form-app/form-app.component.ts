@@ -16,6 +16,8 @@ export class FormAppComponent implements OnInit {
     this.articles = [
       new Article('Java', 'www.java.com'),
       new Article('Angular', 'www.angular.com', 1),
+      new Article('Jquery', 'www.jquery.com', 1),
+
     ];
   }
 
